@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Elige tu destino: un juego de azar con dos botones. ¿Ganarás o perderás?" />
+  <title>Elige tu destino</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="card" id="mainCard">
+
+    <!-- ESTADO INICIAL -->
+    <section class="screen" id="screenChoose">
+      <div class="icon-header">🎯</div>
+      <h1>Elige tu destino</h1>
+      <p class="subtitle">Selecciona un botón y descubre tu suerte</p>
+
+      <div class="buttons-grid">
+        <button class="btn btn-red" id="btnRed" onclick="play()">
+          <span class="btn-icon">🔴</span>
+          <span class="btn-label">Rojo</span>
+        </button>
+        <button class="btn btn-blue" id="btnBlue" onclick="play()">
+          <span class="btn-icon">🔵</span>
+          <span class="btn-label">Azul</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- RESULTADO -->
+    <section class="screen hidden" id="screenResult">
+      <div class="result-icon" id="resultIcon"></div>
+      <h2 class="result-title" id="resultTitle"></h2>
+      <p class="result-msg" id="resultMsg"></p>
+
+      <button class="btn btn-replay" id="btnReplay" onclick="reset()">
+        🔄 Volver a jugar
+      </button>
+    </section>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
